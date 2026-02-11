@@ -16,8 +16,8 @@ EOT
     endpoint_names      = list(string)
     iothub_name         = string
     resource_group_name = string
-    condition           = optional(string, "true")
-    source              = optional(string, "DeviceMessages")
+    condition           = optional(string) # Default: "true"
+    source              = optional(string) # Default: "DeviceMessages"
   }))
 }
 
