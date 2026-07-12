@@ -1,3 +1,7 @@
+output "iothub_fallback_routes_id" {
+  description = "Map of id values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
+  value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.id }
+}
 output "iothub_fallback_routes_condition" {
   description = "Map of condition values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
   value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.condition }
