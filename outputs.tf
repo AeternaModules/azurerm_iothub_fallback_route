@@ -1,29 +1,25 @@
-output "iothub_fallback_routes" {
-  description = "All iothub_fallback_route resources"
-  value       = azurerm_iothub_fallback_route.iothub_fallback_routes
-}
 output "iothub_fallback_routes_condition" {
-  description = "List of condition values across all iothub_fallback_routes"
-  value       = [for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : v.condition]
+  description = "Map of condition values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
+  value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.condition }
 }
 output "iothub_fallback_routes_enabled" {
-  description = "List of enabled values across all iothub_fallback_routes"
-  value       = [for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : v.enabled]
+  description = "Map of enabled values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
+  value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.enabled }
 }
 output "iothub_fallback_routes_endpoint_names" {
-  description = "List of endpoint_names values across all iothub_fallback_routes"
-  value       = [for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : v.endpoint_names]
+  description = "Map of endpoint_names values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
+  value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.endpoint_names }
 }
 output "iothub_fallback_routes_iothub_name" {
-  description = "List of iothub_name values across all iothub_fallback_routes"
-  value       = [for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : v.iothub_name]
+  description = "Map of iothub_name values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
+  value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.iothub_name }
 }
 output "iothub_fallback_routes_resource_group_name" {
-  description = "List of resource_group_name values across all iothub_fallback_routes"
-  value       = [for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : v.resource_group_name]
+  description = "Map of resource_group_name values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
+  value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.resource_group_name }
 }
 output "iothub_fallback_routes_source" {
-  description = "List of source values across all iothub_fallback_routes"
-  value       = [for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : v.source]
+  description = "Map of source values across all iothub_fallback_routes, keyed the same as var.iothub_fallback_routes"
+  value       = { for k, v in azurerm_iothub_fallback_route.iothub_fallback_routes : k => v.source }
 }
 
