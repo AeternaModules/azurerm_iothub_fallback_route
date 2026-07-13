@@ -16,8 +16,8 @@ EOT
     endpoint_names      = list(string)
     iothub_name         = string
     resource_group_name = string
-    condition           = optional(string) # Default: "true"
-    source              = optional(string) # Default: "DeviceMessages"
+    condition           = optional(string)
+    source              = optional(string)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_iothub_fallback_route's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,
